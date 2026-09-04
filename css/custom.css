@@ -27,3 +27,6 @@
   background-size: cover !important;
   background-position:center !important;
 }
+
+/* 引入自定义页脚样式 */
+@import url('/css/runtime.css');

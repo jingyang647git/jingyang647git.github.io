@@ -1,0 +1,47 @@
+/* 自定义页脚样式 - 强制居中覆盖 */
+
+/* 强制覆盖 #ghbdages 徽标容器 */
+#footer #ghbdages {
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 5px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+/* 强制覆盖 #workboard 计时器容器 */
+#footer #workboard {
+  display: block !important;
+  width: 100%;
+  text-align: center !important;
+  margin-top: 10px;
+}
+
+/* 计时器样式 */
+#footer #runtime,
+#footer div#runtime {
+  display: inline-block;
+  text-align: center;
+  color: var(--font-color);
+  padding: 5px 15px;
+  font-size: 14px;
+  margin: 0 auto;
+}
+
+/* 暗色模式适配 */
+[data-theme="dark"] #footer div#runtime {
+  color: #c0c0c0;
+}
+
+/* 徽标样式 */
+#footer a.github-badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 2px;
+}
+
+/* 关闭插件默认的悬停提示（避免干扰） */
+#footer a.github-badge:hover:before {
+  display: none !important;
+}
