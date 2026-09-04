@@ -9,6 +9,7 @@
   'use strict';
 
   // 字体配置 - 默认字体改为霞鹜文楷
+  // 思源黑体、鸿蒙黑体、阿里巴巴普惠体使用系统字体栈，海外访问秒开
   const FONTS = {
     default: {
       name: '霞鹜文楷',
@@ -16,7 +17,7 @@
     },
     noto: {
       name: '思源黑体',
-      family: "'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif"
+      family: "-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif"
     },
     wenkai: {
       name: '霞鹜文楷',
@@ -24,11 +25,11 @@
     },
     harmonyos: {
       name: '鸿蒙黑体',
-      family: "'HarmonyOS Sans SC', -apple-system, BlinkMacSystemFont, sans-serif"
+      family: "-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif"
     },
     alibaba: {
       name: '阿里巴巴普惠体',
-      family: "'Alibaba PuHuiTi', -apple-system, BlinkMacSystemFont, sans-serif"
+      family: "-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif"
     }
   };
 
