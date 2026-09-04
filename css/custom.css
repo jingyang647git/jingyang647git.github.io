@@ -118,3 +118,67 @@
 #friends-link {
   max-width: 1000px !important;
 }
+
+/* ============================
+   导航栏菜单居中 + 搜索框右对齐
+   ============================ */
+#nav {
+  /* 左侧博客信息正常显示 */
+  #blog-info {
+    flex: 0 0 auto;
+    width: auto;
+    position: relative;
+    z-index: 2;
+    background: inherit; /* 防止透明背景下菜单穿透 */
+  }
+
+  /* 让菜单容器绝对居中 */
+  #menus {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    /* 菜单项容器 - 居中显示 */
+    .menus_items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* 搜索按钮 - 移到最右侧 */
+    #search-button {
+      padding: 0 0 0 20px;
+    }
+
+    /* 汉堡菜单按钮 */
+    #toggle-menu {
+      display: none;
+    }
+  }
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+  #nav {
+    #menus {
+      position: static;
+      transform: none;
+      justify-content: flex-end;
+      margin-left: auto;
+
+      .menus_items {
+        display: none;
+      }
+
+      #toggle-menu {
+        display: inline-block;
+      }
+    }
+  }
+}
