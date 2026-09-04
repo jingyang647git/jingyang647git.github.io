@@ -100,3 +100,12 @@
     width: 100%;
   }
 }
+
+/* 限制内容宽度 - 让页面看起来更紧凑 */
+#page,
+#archive,
+#category,
+#tag,
+#friends-link {
+  max-width: 1000px !important;
+}
