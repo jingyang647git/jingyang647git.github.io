@@ -182,3 +182,46 @@
     }
   }
 }
+
+/* ===========================================
+   C方案 - 透明所有卡片，让背景图透出来
+   =========================================== */
+
+/* 中间主内容区（白卡片） - 完全变透明 */
+.layout > div:first-child:not(.nc) {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* 文章内容容器 - 透明 */
+#article-container.container {
+  background: transparent !important;
+}
+
+.post-content {
+  background: transparent !important;
+}
+
+/* 右侧名片区的小卡片 - 毛玻璃透明 */
+#aside-content .card-widget {
+  background: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* 侧栏顶部背景 */
+#aside-content .sticky_layout {
+  background: transparent !important;
+}
+
+/* 暗色模式适配 */
+[data-theme="dark"] #aside-content .card-widget {
+  background: rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .layout > div:first-child:not(.nc) {
+  background: transparent !important;
+}
