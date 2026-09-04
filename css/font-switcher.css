@@ -1,0 +1,138 @@
+/* 字体切换按钮样式 */
+
+/* 字体切换按钮 - 浮动在左下角 */
+.font-switcher-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--font-color, #49b1f5);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.font-switcher-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 字体选择面板 */
+.font-switcher-panel {
+  position: fixed;
+  bottom: 95px;
+  left: 30px;
+  background: var(--card-bg, #fff);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 8px;
+  z-index: 9999;
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 160px;
+  border: 1px solid var(--border-color, #e3e8f7);
+}
+
+.font-switcher-panel.active {
+  display: flex;
+}
+
+/* 字体选项 */
+.font-option {
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--font-color, #4c4948);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.font-option:hover {
+  background: var(--hover-bg, rgba(73, 177, 245, 0.1));
+}
+
+.font-option.active {
+  background: rgba(73, 177, 245, 0.15);
+  color: #49b1f5;
+  font-weight: 600;
+}
+
+/* 字体预览 */
+.font-option[data-font="default"] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+.font-option[data-font="noto"] {
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.font-option[data-font="wenkai"] {
+  font-family: 'LXGW WenKai', sans-serif;
+}
+
+.font-option[data-font="harmonyos"] {
+  font-family: 'HarmonyOS Sans SC', sans-serif;
+}
+
+.font-option[data-font="alibaba"] {
+  font-family: 'Alibaba PuHuiTi', sans-serif;
+}
+
+.font-option .check-icon {
+  opacity: 0;
+  font-size: 12px;
+}
+
+.font-option.active .check-icon {
+  opacity: 1;
+}
+
+/* 暗色模式适配 */
+[data-theme="dark"] .font-switcher-btn {
+  background: #1f2d3d;
+  color: #fff;
+}
+
+[data-theme="dark"] .font-switcher-panel {
+  background: #1f2d3d;
+  border-color: #2d3d54;
+}
+
+[data-theme="dark"] .font-option {
+  color: #c0c0c0;
+}
+
+[data-theme="dark"] .font-option:hover {
+  background: rgba(73, 177, 245, 0.15);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .font-switcher-btn {
+    bottom: 20px;
+    left: 20px;
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  .font-switcher-panel {
+    bottom: 75px;
+    left: 20px;
+    min-width: 140px;
+  }
+}
