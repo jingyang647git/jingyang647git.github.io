@@ -60,11 +60,14 @@
 #recent-posts > .recent-post-items > .recent-post-item .post_cover {
   width: 100%;
   height: 200px;
+  overflow: hidden;
 }
 
 #recent-posts > .recent-post-items > .recent-post-item .post_cover img.post-bg {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
 #recent-posts > .recent-post-items > .recent-post-item > .recent-post-info > .content {
@@ -82,16 +85,22 @@
 }
 
 #recent-posts > .recent-post-items > .recent-post-item > .recent-post-info > .article-title {
-  -webkit-line-clamp: 1;
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
   color: var(--text-highlight-color);
   font-size: 1.2em;
   line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 #recent-posts > .recent-post-items > .recent-post-item > .recent-post-info > .article-meta-wrap {
   margin-bottom: 1rem;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 /* 移动端单列 */
