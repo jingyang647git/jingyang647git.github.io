@@ -184,26 +184,29 @@
 }
 
 /* ===========================================
-   C方案 - 透明所有卡片，让背景图透出来
-   =========================================== */
+   C方案 v2 - 仅首页透明玻璃，文章页/评论恢复实色
+   ============================================================ */
 
-/* 中间主内容区（白卡片） - 完全变透明 */
-.layout > div:first-child:not(.nc) {
+/* —— 1. 首页：主内容透明（让背景图透出） —— */
+.page.is-home #recent-posts,
+.page.is-home .layout > div:first-child:not(.nc),
+body.home #recent-posts,
+body.home .layout > div:first-child:not(.nc) {
   background: transparent !important;
   box-shadow: none !important;
 }
 
-/* 文章内容容器 - 透明 */
-#article-container.container {
+.page.is-home #post-comment,
+.page.is-home .card-comment,
+body.home #post-comment,
+body.home .card-comment {
   background: transparent !important;
+  box-shadow: none !important;
 }
 
-.post-content {
-  background: transparent !important;
-}
-
-/* 右侧名片区的小卡片 - 毛玻璃透明 */
-#aside-content .card-widget {
+/* 首页右侧名片区 - 毛玻璃透明 */
+.page.is-home #aside-content .card-widget,
+body.home #aside-content .card-widget {
   background: rgba(255, 255, 255, 0.12) !important;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
   backdrop-filter: blur(10px);
@@ -211,17 +214,124 @@
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
-/* 侧栏顶部背景 */
-#aside-content .sticky_layout {
+/* 首页侧栏顶部背景透明 */
+.page.is-home #aside-content .sticky_layout,
+body.home #aside-content .sticky_layout {
   background: transparent !important;
 }
 
-/* 暗色模式适配 */
-[data-theme="dark"] #aside-content .card-widget {
+/* —— 2. 文章页：主内容、文章容器、评论全部恢复实色 —— */
+.page.is-post #post,
+.page.is-post .layout > div:first-child:not(.nc),
+.page.is-post #article-container.container,
+.page.is-post .post-content,
+.page.is-post #post-comment,
+.page.is-post #post-comment .card-comment,
+body.post #post,
+body.post .layout > div:first-child:not(.nc),
+body.post #article-container.container,
+body.post #post-comment,
+body.post #post-comment .card-comment {
+  background: var(--card-bg, #ffffff) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* 文章页右侧名片区 - 实色卡片（不要毛玻璃） */
+.page.is-post #aside-content .card-widget,
+body.post #aside-content .card-widget {
+  background: var(--card-bg, #ffffff) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid #e3e8f7 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* —— 3. 其他独立页（留言板/分类/标签/归档等）也恢复实色 —— */
+.page.is-envelope #post,
+.page.is-envelope .layout > div:first-child:not(.nc),
+.page.is-envelope #article-container.container,
+.page.is-envelope #post-comment,
+.page.is-envelope .card-comment,
+.page.is-category #post,
+.page.is-category .layout > div:first-child:not(.nc),
+.page.is-category #article-container.container,
+.page.is-tag #post,
+.page.is-tag .layout > div:first-child:not(.nc),
+.page.is-tag #article-container.container,
+.page.is-archive #post,
+.page.is-archive .layout > div:first-child:not(.nc),
+.page.is-archive #article-container.container,
+.page.is-friends-link #post,
+.page.is-friends-link .layout > div:first-child:not(.nc),
+.page.is-friends-link #article-container.container {
+  background: var(--card-bg, #ffffff) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+.page.is-envelope #aside-content .card-widget,
+.page.is-category #aside-content .card-widget,
+.page.is-tag #aside-content .card-widget,
+.page.is-archive #aside-content .card-widget,
+.page.is-friends-link #aside-content .card-widget {
+  background: var(--card-bg, #ffffff) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid #e3e8f7 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* —— 4. 暗色模式适配 —— */
+/* 首页：暗色毛玻璃 */
+[data-theme="dark"] .page.is-home #aside-content .card-widget,
+[data-theme="dark"] body.home #aside-content .card-widget {
   background: rgba(0, 0, 0, 0.25) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-[data-theme="dark"] .layout > div:first-child:not(.nc) {
-  background: transparent !important;
+/* 文章页：暗色实色 */
+[data-theme="dark"] .page.is-post #post,
+[data-theme="dark"] .page.is-post .layout > div:first-child:not(.nc),
+[data-theme="dark"] .page.is-post #article-container.container,
+[data-theme="dark"] .page.is-post .post-content,
+[data-theme="dark"] .page.is-post #post-comment,
+[data-theme="dark"] .page.is-post #post-comment .card-comment,
+[data-theme="dark"] body.post #post,
+[data-theme="dark"] body.post #article-container.container,
+[data-theme="dark"] body.post #post-comment,
+[data-theme="dark"] body.post #post-comment .card-comment {
+  background: #1f1f1f !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .page.is-post #aside-content .card-widget,
+[data-theme="dark"] body.post #aside-content .card-widget {
+  background: #1f1f1f !important;
+  border: 1px solid #3a3a3a !important;
+  backdrop-filter: none !important;
+}
+
+/* 其他独立页：暗色实色 */
+[data-theme="dark"] .page.is-envelope #post,
+[data-theme="dark"] .page.is-envelope .layout > div:first-child:not(.nc),
+[data-theme="dark"] .page.is-envelope #article-container.container,
+[data-theme="dark"] .page.is-category #post,
+[data-theme="dark"] .page.is-category .layout > div:first-child:not(.nc),
+[data-theme="dark"] .page.is-tag #post,
+[data-theme="dark"] .page.is-tag .layout > div:first-child:not(.nc),
+[data-theme="dark"] .page.is-archive #post,
+[data-theme="dark"] .page.is-archive .layout > div:first-child:not(.nc),
+[data-theme="dark"] .page.is-friends-link #post,
+[data-theme="dark"] .page.is-friends-link .layout > div:first-child:not(.nc) {
+  background: #1f1f1f !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .page.is-envelope #aside-content .card-widget,
+[data-theme="dark"] .page.is-category #aside-content .card-widget,
+[data-theme="dark"] .page.is-tag #aside-content .card-widget,
+[data-theme="dark"] .page.is-archive #aside-content .card-widget,
+[data-theme="dark"] .page.is-friends-link #aside-content .card-widget {
+  background: #1f1f1f !important;
+  border: 1px solid #3a3a3a !important;
+  backdrop-filter: none !important;
 }
