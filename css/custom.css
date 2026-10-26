@@ -1,0 +1,337 @@
+/* 页脚与头图透明 */
+#footer {
+  background: transparent !important;
+}
+#page-header {
+  background: transparent !important;
+}
+
+/* 白天模式遮罩透明 */
+#footer::before {
+  background: transparent !important;
+}
+#page-header::before {
+  background: transparent !important;
+}
+
+/* 夜间模式遮罩透明 */
+[data-theme="dark"] #footer::before {
+  background: transparent !important;
+}
+[data-theme="dark"] #page-header::before {
+  background: transparent !important;
+}
+
+#web_bg{
+  background-attachment: fixed !important;/*滚动页面图片固定不动*/
+  background-size: cover !important;
+  background-position:center !important;
+}
+
+/* 引入自定义页脚样式 */
+@import url('/css/runtime.css');
+
+/* 双侧栏文章列表 - 适配新版 Butterfly 主题（多了一层 .recent-post-items 容器） */
+#recent-posts.recent-posts {
+  margin-top: -1rem;
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#recent-posts > .recent-post-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#recent-posts > .recent-post-items > .recent-post-item {
+  margin-top: 1rem;
+  display: inline-block;
+  height: auto;
+  width: 49%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#recent-posts > .recent-post-items > .recent-post-item .post_cover {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+#recent-posts > .recent-post-items > .recent-post-item .post_cover img.post-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+#recent-posts > .recent-post-items > .recent-post-item > .recent-post-info > .content {
+  display: none;
+}
+
+.recent-post-item {
+  height: auto !important;
+}
+
+.recent-post-info {
+  padding: 0 40px;
+  margin-top: 1em;
+  width: 100% !important;
+}
+
+#recent-posts > .recent-post-items > .recent-post-item > .recent-post-info > .article-title {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  color: var(--text-highlight-color);
+  font-size: 1.2em;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+#recent-posts > .recent-post-items > .recent-post-item > .recent-post-info > .article-meta-wrap {
+  margin-bottom: 1rem;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* 移动端单列 */
+@media screen and (max-width: 768px) {
+  #recent-posts > .recent-post-items > .recent-post-item {
+    width: 100%;
+  }
+}
+
+/* 限制内容宽度 - 让页面看起来更紧凑 */
+#page,
+#archive,
+#category,
+#tag,
+#friends-link {
+  max-width: 1000px !important;
+}
+
+/* ============================
+   导航栏菜单居中 + 搜索框右对齐
+   ============================ */
+#nav {
+  /* 左侧博客信息正常显示 */
+  #blog-info {
+    flex: 0 0 auto;
+    width: auto;
+    position: relative;
+    z-index: 2;
+    background: inherit; /* 防止透明背景下菜单穿透 */
+  }
+
+  /* 让菜单容器绝对居中 */
+  #menus {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    /* 菜单项容器 - 居中显示 */
+    .menus_items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* 搜索按钮 - 移到最右侧 */
+    #search-button {
+      padding: 0 0 0 20px;
+    }
+
+    /* 汉堡菜单按钮 */
+    #toggle-menu {
+      display: none;
+    }
+  }
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+  #nav {
+    #menus {
+      position: static;
+      transform: none;
+      justify-content: flex-end;
+      margin-left: auto;
+
+      .menus_items {
+        display: none;
+      }
+
+      #toggle-menu {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+/* ===========================================
+   C方案 v2 - 仅首页透明玻璃，文章页/评论恢复实色
+   ============================================================ */
+
+/* —— 1. 首页：主内容透明（让背景图透出） —— */
+.page.is-home #recent-posts,
+.page.is-home .layout > div:first-child:not(.nc),
+body.home #recent-posts,
+body.home .layout > div:first-child:not(.nc) {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.page.is-home #post-comment,
+.page.is-home .card-comment,
+body.home #post-comment,
+body.home .card-comment {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* 首页右侧名片区 - 毛玻璃透明 */
+.page.is-home #aside-content .card-widget,
+body.home #aside-content .card-widget {
+  background: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* 首页侧栏顶部背景透明 */
+.page.is-home #aside-content .sticky_layout,
+body.home #aside-content .sticky_layout {
+  background: transparent !important;
+}
+
+/* —— 2. 文章页：主内容、文章容器、评论全部恢复实色 —— */
+.page.is-post #post,
+.page.is-post .layout > div:first-child:not(.nc),
+.page.is-post #article-container.container,
+.page.is-post .post-content,
+.page.is-post #post-comment,
+.page.is-post #post-comment .card-comment,
+body.post #post,
+body.post .layout > div:first-child:not(.nc),
+body.post #article-container.container,
+body.post #post-comment,
+body.post #post-comment .card-comment {
+  background: var(--card-bg, #ffffff) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* 文章页右侧名片区 - 实色卡片（不要毛玻璃） */
+.page.is-post #aside-content .card-widget,
+body.post #aside-content .card-widget {
+  background: var(--card-bg, #ffffff) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid #e3e8f7 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* —— 3. 其他独立页（留言板/分类/标签/归档等）也恢复实色 —— */
+.page.is-envelope #post,
+.page.is-envelope .layout > div:first-child:not(.nc),
+.page.is-envelope #article-container.container,
+.page.is-envelope #post-comment,
+.page.is-envelope .card-comment,
+.page.is-category #post,
+.page.is-category .layout > div:first-child:not(.nc),
+.page.is-category #article-container.container,
+.page.is-tag #post,
+.page.is-tag .layout > div:first-child:not(.nc),
+.page.is-tag #article-container.container,
+.page.is-archive #post,
+.page.is-archive .layout > div:first-child:not(.nc),
+.page.is-archive #article-container.container,
+.page.is-friends-link #post,
+.page.is-friends-link .layout > div:first-child:not(.nc),
+.page.is-friends-link #article-container.container {
+  background: var(--card-bg, #ffffff) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+.page.is-envelope #aside-content .card-widget,
+.page.is-category #aside-content .card-widget,
+.page.is-tag #aside-content .card-widget,
+.page.is-archive #aside-content .card-widget,
+.page.is-friends-link #aside-content .card-widget {
+  background: var(--card-bg, #ffffff) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid #e3e8f7 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* —— 4. 暗色模式适配 —— */
+/* 首页：暗色毛玻璃 */
+[data-theme="dark"] .page.is-home #aside-content .card-widget,
+[data-theme="dark"] body.home #aside-content .card-widget {
+  background: rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 文章页：暗色实色 */
+[data-theme="dark"] .page.is-post #post,
+[data-theme="dark"] .page.is-post .layout > div:first-child:not(.nc),
+[data-theme="dark"] .page.is-post #article-container.container,
+[data-theme="dark"] .page.is-post .post-content,
+[data-theme="dark"] .page.is-post #post-comment,
+[data-theme="dark"] .page.is-post #post-comment .card-comment,
+[data-theme="dark"] body.post #post,
+[data-theme="dark"] body.post #article-container.container,
+[data-theme="dark"] body.post #post-comment,
+[data-theme="dark"] body.post #post-comment .card-comment {
+  background: #1f1f1f !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .page.is-post #aside-content .card-widget,
+[data-theme="dark"] body.post #aside-content .card-widget {
+  background: #1f1f1f !important;
+  border: 1px solid #3a3a3a !important;
+  backdrop-filter: none !important;
+}
+
+/* 其他独立页：暗色实色 */
+[data-theme="dark"] .page.is-envelope #post,
+[data-theme="dark"] .page.is-envelope .layout > div:first-child:not(.nc),
+[data-theme="dark"] .page.is-envelope #article-container.container,
+[data-theme="dark"] .page.is-category #post,
+[data-theme="dark"] .page.is-category .layout > div:first-child:not(.nc),
+[data-theme="dark"] .page.is-tag #post,
+[data-theme="dark"] .page.is-tag .layout > div:first-child:not(.nc),
+[data-theme="dark"] .page.is-archive #post,
+[data-theme="dark"] .page.is-archive .layout > div:first-child:not(.nc),
+[data-theme="dark"] .page.is-friends-link #post,
+[data-theme="dark"] .page.is-friends-link .layout > div:first-child:not(.nc) {
+  background: #1f1f1f !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .page.is-envelope #aside-content .card-widget,
+[data-theme="dark"] .page.is-category #aside-content .card-widget,
+[data-theme="dark"] .page.is-tag #aside-content .card-widget,
+[data-theme="dark"] .page.is-archive #aside-content .card-widget,
+[data-theme="dark"] .page.is-friends-link #aside-content .card-widget {
+  background: #1f1f1f !important;
+  border: 1px solid #3a3a3a !important;
+  backdrop-filter: none !important;
+}
