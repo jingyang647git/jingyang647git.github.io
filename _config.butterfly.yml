@@ -94,7 +94,7 @@ beautify:
   title_prefix_icon_color:
 
 subtitle:
-  enable: true
+  enable: false # 2026-10-29 应需求关闭：原为 source: 1（一言 API 每日一句打字机）
   effect: false
   typed_option:
   source: 1
