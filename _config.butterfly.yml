@@ -1,0 +1,285 @@
+# ==========================================================
+# Butterfly 主题配置（覆盖主题默认值，只写与默认不同的部分）
+# 完整默认值见：node_modules/hexo-theme-butterfly/_config.yml
+# ==========================================================
+
+nav:
+  logo:
+  display_title: true
+  display_post_title: true
+  fixed: false
+
+menu:
+  首页: / || fas fa-home
+  回档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  列表||fas fa-list:
+    音乐: /music/ || fas fa-music
+    电影: /movies/ || fas fa-video
+  留言板: /comments/ || fas fa-envelope-open
+  友链: /link/ || fas fa-link
+  关于: /about/ || fas fa-user-circle
+
+code_blocks:
+  theme: light
+  # 仿 Mac 窗口三色按钮
+  macStyle: true
+  # 代码块最大高度（px），超出时显示「展开」按钮
+  height_limit: 300
+  word_wrap: false
+  copy: true
+  language: true
+  shrink: false
+  fullpage: false
+
+social:
+  fab fa-github: https://github.com/jingyang647git || Github || '#24292e'
+  fas fa-envelope: mailto:2899023120@gmail.com || Email || '#4a7dbe'
+
+favicon: /img/favicon.png
+
+avatar:
+  img: https://bu.dusays.com/2026/08/28/6a90f4c4022c6.jpg
+  effect: false
+
+disable_top_img: false
+# 内页（归档/标签/分类/关于…）不显示顶部大图
+default_top_img: false
+# 首页顶部大图设为透明，露出全屏背景图
+index_img: transparent
+
+background: url(/img/background.webp)
+
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  default_cover:
+    - https://npm.elemecdn.com/akilar-candyassets/image/cover1.webp
+
+error_img:
+  flink: /img/friend_404.gif
+  post_page: /img/404.jpg
+
+error_404:
+  enable: true
+  subtitle: 'Page Not Found'
+  background: /img/error-page.png
+
+post_meta:
+  page:
+    date_type: created
+    # 首页卡片用相对时间（几分钟前 / 几天前）
+    date_format: relative
+    categories: true
+    tags: false
+    label: true
+  post:
+    position: left
+    date_type: both
+    # 文章页也用相对时间
+    date_format: relative
+    categories: true
+    tags: true
+    label: true
+
+# 标题美化（标题前的图标 + 悬停效果）
+beautify:
+  enable: true
+  field: post
+  title_prefix_icon:
+  title_prefix_icon_color:
+
+subtitle:
+  enable: true
+  effect: false
+  typed_option:
+  source: 1
+  sub:
+
+# 首页文章卡片：封面在左、信息在右（配合双排卡片样式）
+index_layout: 1
+
+index_post_content:
+  method: 3
+  length: 500
+
+toc:
+  post: true
+  page: false
+  number: true
+  expand: false
+  style_simple: false
+  scroll_percent: true
+
+footer:
+  nav:
+  owner:
+    enable: true
+    since: 2025
+  copyright:
+    enable: true
+    version: true
+  custom_text:
+
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  card_author:
+    enable: true
+    description: 演示博客
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/jingyang647git
+  card_announcement:
+    enable: true
+    content: 欢迎来到我的博客！
+  card_recent_post:
+    enable: false
+  card_categories:
+    enable: false
+  card_tags:
+    enable: false
+  card_archives:
+    enable: true
+    type: monthly
+    format: MMMM YYYY
+    order: -1
+    limit: 8
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+    runtime_date:
+
+translate:
+  enable: true
+  default: 繁
+  defaultEncoding: 2
+  translateDelay: 0
+  msgToTraditionalChinese: 繁
+
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+
+wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+busuanzi:
+  site_uv: false
+  site_pv: false
+  page_pv: false
+
+search:
+  use: local_search
+  placeholder: 搜索文章...
+  local_search:
+    preload: false
+    top_n_per_article: 1
+    unescape: false
+    pagination:
+      enable: false
+    CDN:
+
+share:
+  use: sharejs
+  sharejs:
+    sites: facebook,x,wechat,weibo,qq
+
+comments:
+  use: Twikoo
+  text: true
+  lazyload: false
+  count: true
+  card_post_count: false
+
+twikoo:
+  envId: https://comments.sovely.cn/
+  region:
+  style:
+
+preloader:
+  enable: false
+
+snackbar:
+  enable: true
+  position: bottom-left
+  bg_light: '#49b1f5'
+  bg_dark: '#1f1f1f'
+
+# 预加载下一页（instant.page）
+instantpage: true
+
+# ==========================================================
+# 首页分类卡片（hexo-butterfly-categories-card）
+# ==========================================================
+categoryBar:
+  enable: true
+  priority: 10
+  enable_page: /
+  layout:
+    type: id
+    name: recent-posts
+    index: 0
+  column: odd
+  row: 1
+  message:
+    - cover: https://npm.elemecdn.com/akilar-candyassets/image/cover1.webp
+      descr: 技术
+
+# ==========================================================
+# 页脚美化：运行时间 + 徽标（hexo-butterfly-footer-beautify）
+# ==========================================================
+footer_beautify:
+  enable:
+    timer: true
+    bdage: true
+  priority: 10
+  enable_page: all
+  exclude:
+  layout:
+    type: id
+    name: footer
+    index: 0
+  runtime_js: /js/runtime.js
+  runtime_css: 'data:text/css,'
+  bdageitem:
+    - link: https://hexo.io/
+      shields: https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo
+      message: 博客框架为Hexo
+    - link: https://butterfly.js.org/
+      shields: https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender
+      message: 主题使用Butterfly
+    - link: https://github.com/jingyang647git
+      shields: https://img.shields.io/badge/Github-jingyang647git-4EiaA9?style=flat&logo=github
+      message: GitHub
+
+# ==========================================================
+# 自定义注入
+# ==========================================================
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/custom.css">
+    - <link rel="stylesheet" href="/css/runtime.css">
+    - <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/lxgwwenkai-regular.css">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/lxgwwenkai-bold.css">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css">
+    - '<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A"; white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>'
+  bottom:
+    - <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    - <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+    - <script>window.SITE_CREATE_TIME = '2026-09-03 00:00:00';</script>
+    - <script src="/js/runtime.js" defer></script>
