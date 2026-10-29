@@ -50,8 +50,8 @@ default_top_img: false
 index_img: transparent
 
 # 全屏背景图：这里只写路径，主题会自动包一层 url()，不要再手写 url(...)
-# 使用 B 站图床外链（2026-10-29 起），本地图源 background.webp 保留在 /img 备用
-background: https://i0.hdslb.com/bfs/article/a20615ce21532ae44ee6ac96b02c5ee949795ac8.jpg
+# 路过图床外链（2026-10-29 起），源文件 background-image/background-compressed.webp
+background: https://bu.dusays.com/2026/10/29/6ae2b4cb658ef.webp
 
 cover:
   index_enable: true
