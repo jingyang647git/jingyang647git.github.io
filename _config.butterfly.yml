@@ -49,7 +49,8 @@ default_top_img: false
 # 首页顶部大图设为透明，露出全屏背景图
 index_img: transparent
 
-background: url(/img/background.webp)
+# 全屏背景图：这里只写路径，主题会自动包一层 url()，不要再手写 url(...)
+background: /img/background.webp
 
 cover:
   index_enable: true
