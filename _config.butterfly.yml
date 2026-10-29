@@ -14,9 +14,6 @@ menu:
   回档: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
-  列表||fas fa-list:
-    音乐: /music/ || fas fa-music
-    电影: /movies/ || fas fa-video
   留言板: /comments/ || fas fa-envelope-open
   友链: /link/ || fas fa-link
   关于: /about/ || fas fa-user-circle
@@ -275,13 +272,8 @@ inject:
     - <link rel="stylesheet" href="/css/custom.css">
     - <link rel="stylesheet" href="/css/runtime.css">
     - <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/lxgwwenkai-regular.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/lxgwwenkai-bold.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css">
     - '<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A"; white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>'
   bottom:
-    - <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-    - <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
     - <script>window.SITE_CREATE_TIME = '2026-09-03 00:00:00';</script>
     - <script src="/js/runtime.js" defer></script>
