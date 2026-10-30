@@ -335,3 +335,16 @@ body.post #aside-content .card-widget {
   border: 1px solid #3a3a3a !important;
   backdrop-filter: none !important;
 }
+
+/* ============================================================
+   分类卡片（hexo-butterfly-categories-card）：去除装饰符号和计数
+   1. 去掉分类名前的竖线 "|"（插件用 ::before 伪元素渲染）
+   2. 隐藏文章计数徽标（数字 + 故障的 FA 图标 ⊠）
+   ============================================================ */
+.categoryBar-list-item a.categoryBar-list-link::before {
+  content: none !important;
+}
+
+.categoryBar-list-count {
+  display: none !important;
+}

@@ -234,10 +234,10 @@ categoryBar:
   column: odd
   row: 1
   message:
-    - cover: https://bu.dusays.com/2026/09/15/6aa91626c739c.webp
-      descr: 技术
     - cover: https://p2.music.126.net/FahHKWzpgA5t9hIaj4kbBQ==/6649846324993045.jpg
       descr: 音乐
+    - cover: https://bu.dusays.com/2026/09/15/6aa91626c739c.webp
+      descr: 技术
 
 # ==========================================================
 # 页脚美化：运行时间 + 徽标（hexo-butterfly-footer-beautify）
