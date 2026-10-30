@@ -54,8 +54,8 @@ cover:
   index_enable: true
   aside_enable: true
   archives_enable: true
-  default_cover:
-    - https://npm.elemecdn.com/akilar-candyassets/image/cover1.webp
+  # 2026-10-30 移除默认封面（原为 akilar 演示动漫图，导致所有卡片同图）
+  # 文章未设置 cover 时卡片显示为纯文字；需要兜底图可在此加回 default_cover
 
 error_img:
   flink: /img/friend_404.gif
@@ -234,8 +234,10 @@ categoryBar:
   column: odd
   row: 1
   message:
-    - cover: https://npm.elemecdn.com/akilar-candyassets/image/cover1.webp
+    - cover: https://bu.dusays.com/2026/09/15/6aa91626c739c.webp
       descr: 技术
+    - cover: https://p2.music.126.net/FahHKWzpgA5t9hIaj4kbBQ==/6649846324993045.jpg
+      descr: 音乐
 
 # ==========================================================
 # 页脚美化：运行时间 + 徽标（hexo-butterfly-footer-beautify）

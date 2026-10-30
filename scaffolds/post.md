@@ -4,5 +4,6 @@ date: {{ date }}
 categories:
 tags:
 top_img:
+cover:
 description:
 ---

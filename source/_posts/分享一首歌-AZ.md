@@ -10,6 +10,7 @@ tags:
   - 日语歌
   - 动漫音乐
 top_img: 'https://p2.music.126.net/FahHKWzpgA5t9hIaj4kbBQ==/6649846324993045.jpg'
+cover: 'https://p2.music.126.net/FahHKWzpgA5t9hIaj4kbBQ==/6649846324993045.jpg'
 description: 泽野弘之 × mizuki 的 A/Z，一首把电音和交响揉进战火里的歌。
 abbrlink: 2365282548
 date: 2026-10-29 11:22:00
