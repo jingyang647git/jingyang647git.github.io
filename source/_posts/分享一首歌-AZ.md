@@ -16,11 +16,14 @@ abbrlink: 2365282548
 date: 2026-10-29 11:22:00
 ---
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
-
-<meting-js auto="https://y.music.163.com/m/song?id=399723430"></meting-js>
+<!--
+  本文只做推荐，不内嵌播放器：该曲目为网易云 VIP 曲目，无法合法外链播放。
+  想听请到正版平台搜索「A/Z SawanoHiroyuki nZk」。
+-->
+<figure class="song-cover">
+  <img src="https://p2.music.126.net/FahHKWzpgA5t9hIaj4kbBQ==/6649846324993045.jpg" alt="《A/Z | aLIEz》专辑封面">
+  <figcaption>A/Z | aLIEz · SawanoHiroyuki[nZk]</figcaption>
+</figure>
 
 这首歌叫 **A/Z**，唱的人是 mizuki，作曲是泽野弘之——就是那个给《进击的巨人》《ALDNOAH.ZERO》写神曲的泽野。它和更有名的《aLIEz》出自同一张专辑《A/Z | aLIEz》，都是泽野的声乐企划 SawanoHiroyuki[nZk] 的作品。
 
@@ -34,6 +37,6 @@ mizuki 的声线值得单独说一句：不飙高音、不炫技，但那种带�
 - 健身最后几组，需要 pretend 自己在开高达
 - 下雨天走路，想装作自己有故事
 
-如果你也听过，欢迎在留言板聊聊感受；没听过的，点上面的播放器就行，3 分钟不会浪费。
+如果你也听过，欢迎在留言板聊聊感受；没听过的话，去网易云或 QQ 音乐搜「A/Z SawanoHiroyuki nZk」，3 分钟不会浪费。
 
-> 本页播放器由 Meting 提供，音频来自网易云，VIP 歌曲无法外链播放——这首是免费的，放心点。
+> 本文只做推荐，不内嵌播放器。该曲目版权归 Sony Music / 网易云所有，想听请支持正版。
