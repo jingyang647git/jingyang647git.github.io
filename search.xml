@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>26.1029测试</title>
-    <url>/2026/10/29/26-1029%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p>今天将博客的详细内容转移到新的台式电脑上，进行一个简单的功能测试。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>分享一首歌：A/Z</title>
     <url>/2026/10/29/%E5%88%86%E4%BA%AB%E4%B8%80%E9%A6%96%E6%AD%8C-AZ/</url>
     <content><![CDATA[<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
@@ -40,6 +34,12 @@
         <tag>日语歌</tag>
         <tag>动漫音乐</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>26.1029测试</title>
+    <url>/2026/10/29/26-1029%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p>今天将博客的详细内容转移到新的台式电脑上，进行一个简单的功能测试。</p>
+]]></content>
   </entry>
   <entry>
     <title>tingshu</title>
