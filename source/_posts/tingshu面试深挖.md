@@ -1,9 +1,10 @@
 ---
 title: tingshu
+categories: 技术
+top_img: 'https://bu.dusays.com/2026/09/15/6aa91626c739c.webp'
+abbrlink: 4055875927
 date: 2026-09-15 15:30:00
 updated: 2026-09-15 17:56:20
-categories: 技术
-top_img: https://bu.dusays.com/2026/09/15/6aa91626c739c.webp
 ---
 
 # tingshu 听书项目 · 面试深挖

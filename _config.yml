@@ -14,8 +14,15 @@ timezone: 'Asia/Shanghai'
 # If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
 url: https://www.sovely.cn
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:month/:day/:abbrlink/
 permalink_defaults:
+
+# 文章短链（hexo-abbrlink）：首次生成后写回 front-matter，之后永久不变
+abbrlink:
+  alg: crc32   # 算法 crc16（短）/ crc32（更不易撞）
+  rep: dec     # 进制 dec（十进制）/ hex（十六进制更短）
+  drafts: false
+  force: false # true = 每次构建强制重算（会改变链接，勿开）
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks

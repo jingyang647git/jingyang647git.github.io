@@ -1,17 +1,18 @@
 ---
 title: 分享一首歌：A/Z
-date: 2026-10-29 11:22:00
 categories: 音乐
 tags:
   - 音乐分享
   - 泽野弘之
   - mizuki
-  - "SawanoHiroyuki[nZk]"
+  - 'SawanoHiroyuki[nZk]'
   - ALDNOAH.ZERO
   - 日语歌
   - 动漫音乐
-top_img: https://p2.music.126.net/FahHKWzpgA5t9hIaj4kbBQ==/6649846324993045.jpg
+top_img: 'https://p2.music.126.net/FahHKWzpgA5t9hIaj4kbBQ==/6649846324993045.jpg'
 description: 泽野弘之 × mizuki 的 A/Z，一首把电音和交响揉进战火里的歌。
+abbrlink: 2365282548
+date: 2026-10-29 11:22:00
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
