@@ -10,25 +10,17 @@
       </categories>
   </entry>
   <entry>
-    <title>测试本地图片粘贴上传图床</title>
-    <url>/2026/10/30/3061901426/</url>
-    <content><![CDATA[<p><img src="https://bu.dusays.com/2026/10/30/6ae40a0214a66.webp" alt="640"></p>
-]]></content>
-      <categories>
-        <category>工具折腾</category>
-      </categories>
-      <tags>
-        <tag>风景</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>分享一首歌：A/Z</title>
     <url>/2026/10/29/2365282548/</url>
-    <content><![CDATA[<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+    <content><![CDATA[<!--
+  本文只做推荐，不内嵌播放器：该曲目为网易云 VIP 曲目，无法合法外链播放。
+  想听请到正版平台搜索「A/Z SawanoHiroyuki nZk」。
+-->
+<figure class="song-cover">
+  <img src="https://p2.music.126.net/FahHKWzpgA5t9hIaj4kbBQ==/6649846324993045.jpg" alt="《A/Z | aLIEz》专辑封面">
+  <figcaption>A/Z | aLIEz · SawanoHiroyuki[nZk]</figcaption>
+</figure>
 
-<p><meting-js auto="https://y.music.163.com/m/song?id=399723430"></meting-js></p>
 <p>这首歌叫 <strong>A&#x2F;Z</strong>，唱的人是 mizuki，作曲是泽野弘之——就是那个给《进击的巨人》《ALDNOAH.ZERO》写神曲的泽野。它和更有名的《aLIEz》出自同一张专辑《A&#x2F;Z | aLIEz》，都是泽野的声乐企划 SawanoHiroyuki[nZk] 的作品。</p>
 <p>第一次听是被前奏骗进去的：钢琴很安静，像深夜电台。结果 40 秒后鼓点和电子音直接砸下来，弦乐铺开，整个人被按在椅子上。这种”前半段把你哄睡、后半段把你炸醒”的结构，是泽野最擅长也最招人”恨”的写法。</p>
 <p>mizuki 的声线值得单独说一句：不飙高音、不炫技，但那种带一点沙的冷静感，和歌词里”在废墟里也要往前走”的劲儿刚好咬合。日系 ACG 歌唱成这样，不属于抓耳型，属于越听越有东西的类型。</p>
@@ -38,9 +30,9 @@
 <li>健身最后几组，需要 pretend 自己在开高达</li>
 <li>下雨天走路，想装作自己有故事</li>
 </ul>
-<p>如果你也听过，欢迎在留言板聊聊感受；没听过的，点上面的播放器就行，3 分钟不会浪费。</p>
+<p>如果你也听过，欢迎在留言板聊聊感受；没听过的话，去网易云或 QQ 音乐搜「A&#x2F;Z SawanoHiroyuki nZk」，3 分钟不会浪费。</p>
 <blockquote>
-<p>本页播放器由 Meting 提供，音频来自网易云，VIP 歌曲无法外链播放——这首是免费的，放心点。</p>
+<p>本文只做推荐，不内嵌播放器。该曲目版权归 Sony Music &#x2F; 网易云所有，想听请支持正版。</p>
 </blockquote>
 ]]></content>
       <categories>
@@ -54,6 +46,18 @@
         <tag>ALDNOAH.ZERO</tag>
         <tag>日语歌</tag>
         <tag>动漫音乐</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试本地图片粘贴上传图床</title>
+    <url>/2026/10/30/3061901426/</url>
+    <content><![CDATA[<p><img src="https://bu.dusays.com/2026/10/30/6ae40a0214a66.webp" alt="640"></p>
+]]></content>
+      <categories>
+        <category>工具折腾</category>
+      </categories>
+      <tags>
+        <tag>风景</tag>
       </tags>
   </entry>
   <entry>
