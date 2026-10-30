@@ -1,6 +1,6 @@
 ---
 title: tingshu
-categories: 技术
+categories: 求职面试
 top_img: 'https://bu.dusays.com/2026/09/15/6aa91626c739c.webp'
 cover: 'https://bu.dusays.com/2026/09/15/6aa91626c739c.webp'
 abbrlink: 4055875927

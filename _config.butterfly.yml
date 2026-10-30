@@ -221,23 +221,25 @@ snackbar:
 instantpage: true
 
 # ==========================================================
-# 首页分类卡片（hexo-butterfly-categories-card）
+# 首页分类卡片（自渲染，见 scripts/category-cards.js）
+# 按分类名配对，配置顺序 = 展示顺序；分类下还没有文章时会自动跳过
 # ==========================================================
-categoryBar:
+category_cards:
   enable: true
-  priority: 10
-  enable_page: /
-  layout:
-    type: id
-    name: recent-posts
-    index: 0
-  column: odd
-  row: 1
-  message:
-    - cover: https://p2.music.126.net/FahHKWzpgA5t9hIaj4kbBQ==/6649846324993045.jpg
-      descr: 音乐
-    - cover: https://bu.dusays.com/2026/09/15/6aa91626c739c.webp
-      descr: 技术
+  show_count: true
+  cards:
+    - name: 建站手记
+      cover: https://bu.dusays.com/2026/10/29/6ae2b4cb658ef.webp
+      descr: 迁移、部署与日常维护
+    - name: 工具折腾
+      cover: https://bu.dusays.com/2026/10/30/6ae40a0214a66.webp
+      descr: 图床、脚本与效率工具
+    - name: 求职面试
+      cover: https://bu.dusays.com/2026/09/15/6aa91626c739c.webp
+      descr: 面试真题与项目复盘
+    - name: 音乐分享
+      cover: https://p2.music.126.net/FahHKWzpgA5t9hIaj4kbBQ==/6649846324993045.jpg
+      descr: 一首歌，一段心情
 
 # ==========================================================
 # 页脚美化：运行时间 + 徽标（hexo-butterfly-footer-beautify）

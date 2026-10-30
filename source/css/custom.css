@@ -337,14 +337,132 @@ body.post #aside-content .card-widget {
 }
 
 /* ============================================================
-   分类卡片（hexo-butterfly-categories-card）：去除装饰符号和计数
-   1. 去掉分类名前的竖线 "|"（插件用 ::before 伪元素渲染）
-   2. 隐藏文章计数徽标（数字 + 故障的 FA 图标 ⊠）
+   首页分类卡片（scripts/category-cards.js 生成）
+   —— 按分类名配置，不再依赖分类顺序，也不会出现文字溢到隔壁卡片
    ============================================================ */
-.categoryBar-list-item a.categoryBar-list-link::before {
-  content: none !important;
+.category-cards-panel {
+  display: block;
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 20px;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--card-bg, #fff);
+  box-shadow: 0 3px 8px 6px rgba(7, 17, 27, .05);
 }
 
-.categoryBar-list-count {
-  display: none !important;
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.category-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border-radius: 10px;
+  text-decoration: none !important;
+}
+
+.category-card-cover {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform .5s ease;
+}
+
+.category-card-mask {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .12) 0%, rgba(0, 0, 0, .58) 100%);
+  transition: background .4s ease;
+}
+
+.category-card-body {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.category-card-count {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1;
+  color: rgba(255, 255, 255, .8);
+}
+
+.category-card-name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, .45);
+}
+
+.category-card-name::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  margin-top: 5px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, .9);
+  transition: width .4s ease;
+}
+
+.category-card-descr {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, .82);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .4s ease, transform .4s ease;
+}
+
+.category-card:hover .category-card-cover {
+  transform: scale(1.08);
+}
+
+.category-card:hover .category-card-mask {
+  background: linear-gradient(180deg, rgba(0, 0, 0, .32) 0%, rgba(0, 0, 0, .72) 100%);
+}
+
+.category-card:hover .category-card-name::after {
+  width: 26px;
+}
+
+.category-card:hover .category-card-descr {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 900px) {
+  .category-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .category-card {
+    aspect-ratio: 16 / 9;
+  }
+
+  .category-card-name {
+    font-size: 16px;
+  }
+}
+
+[data-theme="dark"] .category-cards-panel {
+  background: #1f1f1f !important;
+  box-shadow: 0 3px 8px 6px rgba(0, 0, 0, .3);
 }

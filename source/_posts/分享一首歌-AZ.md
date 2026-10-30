@@ -1,6 +1,6 @@
 ---
 title: 分享一首歌：A/Z
-categories: 音乐
+categories: 音乐分享
 tags:
   - 音乐分享
   - 泽野弘之
