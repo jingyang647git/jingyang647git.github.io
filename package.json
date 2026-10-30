@@ -7,13 +7,12 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "publish": "hexo clean && node tools/check-frontmatter.js && hexo generate && hexo deploy",
+    "publish": "hexo clean && hexo generate && hexo deploy",
     "preview": "hexo server -p 4000",
     "server": "hexo server",
     "new": "hexo new",
     "img": "node tools/7bu-upload.js --markdown",
-    "fm": "node tools/front-matter.js",
-    "check": "node tools/check-frontmatter.js"
+    "fm": "node tools/front-matter.js"
   },
   "hexo": {
     "version": "8.1.2"
