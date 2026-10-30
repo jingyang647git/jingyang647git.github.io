@@ -1,34 +1,34 @@
 @echo off
-chcp 65001 >nul
+setlocal
 cd /d "%~dp0"
 
 echo ============================================
-echo   新建博客文章
+echo   New blog post
 echo ============================================
 echo.
 
 set "TITLE="
-set /p TITLE=请输入文章标题（直接回车确认）: 
-
-if "%TITLE%"=="" (
-  echo [错误] 标题不能为空
-  pause
-  exit /b 1
-)
+set /p "TITLE=Post title (Chinese OK), Enter to confirm: "
+if not defined TITLE goto empty
 
 echo.
-echo 正在创建: %TITLE%
+echo Creating: %TITLE%
 call npx hexo new "%TITLE%"
-if errorlevel 1 (
-  echo [错误] 创建失败，请查看上面的日志
-  pause
-  exit /b 1
-)
+if errorlevel 1 goto fail
 
-echo.
-echo 已创建: source\_posts\%TITLE%.md
-echo 正在用默认编辑器打开...
+if not exist "source\_posts\%TITLE%.md" goto fail
+
+echo Opening: source\_posts\%TITLE%.md
 start "" "source\_posts\%TITLE%.md"
-
-timeout /t 2 >nul
+ping -n 3 127.0.0.1 >nul
 exit /b 0
+
+:empty
+echo [ERROR] Title is empty.
+pause
+exit /b 1
+
+:fail
+echo [ERROR] Failed. Check the log above.
+pause
+exit /b 1
