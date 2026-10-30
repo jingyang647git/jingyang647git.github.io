@@ -6,3 +6,7 @@ node_modules/
 public/
 .deploy*/
 _config.butterfly.yml.bak
+
+# 图床上传工具：token 与本地备份，绝不入库
+.env
+_img_backup/

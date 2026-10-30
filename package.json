@@ -10,7 +10,9 @@
     "publish": "hexo clean && hexo generate && hexo deploy",
     "preview": "hexo server -p 4000",
     "server": "hexo server",
-    "new": "hexo new"
+    "new": "hexo new",
+    "img": "node tools/7bu-upload.js --markdown",
+    "fm": "node tools/front-matter.js"
   },
   "hexo": {
     "version": "8.1.2"
@@ -34,5 +36,8 @@
     "hexo-theme-butterfly": "^5.7.0",
     "hexo-wordcount": "^6.0.1",
     "live2d-widget-model-koharu": "^1.0.5"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
   }
 }
