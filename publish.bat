@@ -27,14 +27,32 @@ if not exist "public\index.html" goto fail
 
 echo [3/3] deploy to GitHub...
 call npx hexo deploy
-if errorlevel 1 goto fail
+if not errorlevel 1 goto deploy_ok
 
+echo.
+echo   direct push failed, retrying through proxy 127.0.0.1:7897 ...
+git --git-dir="%~dp0.deploy_git\.git" config http.proxy http://127.0.0.1:7897
+call npx hexo deploy
+if errorlevel 1 goto deploy_fail
+
+:deploy_ok
+git --git-dir="%~dp0.deploy_git\.git" config --unset http.proxy >nul 2>&1
 echo.
 echo Done. Vercel will be live in about 20 seconds.
 echo Open: https://www.sovely.cn
 echo.
 pause
 exit /b 0
+
+:deploy_fail
+git --git-dir="%~dp0.deploy_git\.git" config --unset http.proxy >nul 2>&1
+echo.
+echo DEPLOY FAILED. Your build is fine (step 2 passed), only the
+echo GitHub push was blocked. Check that your proxy software is
+echo running, then run publish.bat again - it will retry.
+echo.
+pause
+exit /b 1
 
 :fail
 echo.
